@@ -1,0 +1,5 @@
+<%= form_for :lookup, :url => :lookup do |f| %>
+  <%= f.label :snippet_id, 'Snippet #' %>
+  <%= f.text_field :snippet_id, :type => :number %>
+  <%= f.submit t(:lookup) %>
+<% end %>

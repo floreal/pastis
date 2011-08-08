@@ -1,6 +1,11 @@
 Pastis::Application.routes.draw do
-  get "pages/home"
-  get "pages/contact"
-  get "pages/about"
+  resources :snippets
   
+  #match "/create"   => 'snippet#create'
+  match "/home"     => 'pages#home'
+  match "/contact"  => 'pages#contact'
+  match "/about"    => 'pages#about'
+  match "/lookup"   => 'lookup#find'
+  
+  root :to          => 'Pages#home'
 end
