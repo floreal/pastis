@@ -38,5 +38,6 @@ module Pastis
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    config.supported_languages = YAML.load File.open(File.join(File.dirname(__FILE__), 'supported_languages.yml'))
   end
 end

@@ -1,7 +1,7 @@
 module SnippetsHelper
   def language_options
     Snippet.supported_languages.map do |lang|
-      [ t(lang.to_sym), lang ]
+      [ t(lang.to_sym, :scope => [ :supported_languages ]), lang ]
     end
   end
   

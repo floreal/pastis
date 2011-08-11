@@ -8,4 +8,30 @@ en:
     attributes:
       snippet:
         content: "Snippet"
+  supported_languages:
+    applescript: AppleScript
+    actionscript3: ActionScript 3
+    coldfusion: ColdFusion
+    c: C / C++
+    csharp: C#
+    css: CSS
+    delphi: Delphi
+    diff: Diff / Patch
+    erlang: Erlang
+    groovy: Groovy
+    java: Java
+    javafx: JavaFX
+    javascript: JavaScript
+    pascal: Pascal
+    perl: Perl
+    php: PHP
+    python: Python
+    ruby: Ruby / Rails
+    sass: Sass / Scss
+    scala: Scala
+    shell: UNIX Shell
+    sql: SQL
+    text: Plain text
+    vbnet: Visual Basic
+    xml: XML / XHTML /HTML
   
