@@ -116,11 +116,16 @@ section {
     border-radius: 15px;
     width: 710px;
     margin-top: 60px;
+    height: 40em;
 }
 
 #container, #top {
     background-color: #c0c38c;
     width: 100%;
+}
+
+.syntaxhighlighter {
+    height: 38em;
 }
 
 /* Snippet form */
