@@ -1,11 +1,11 @@
-<%= form_for (@snippet) do |f| %>  
+<%= render 'snippets/errors' %>
+<%= form_for (@snippet) do |f| %>
   <ul>
     <li>
       <%= f.label :language %>
       <%= f.select :language, language_options %>
     </li>
     <li>
-      <%= f.label :content %>
       <%= f.text_area :content %>
     </li>
     <li>

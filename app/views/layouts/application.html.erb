@@ -2,16 +2,39 @@
 <html>
   <head>
     <title>Pastis | <%= @title %></title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->    
+    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+    <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+    <!--[if lt IE 8]>
+    <%= stylesheet_link_tag 'blueprint/ie' %>
+    <![endif]-->
+    <%= stylesheet_link_tag 'custom', :media => 'screen' %>
     <%= stylesheet_link_tag "shCore",
-                            "shThemeDefault" %>
+      "shThemeDefault" %>
     <%= javascript_include_tag "syntax-highlighter/shCore",
-                               "syntax-highlighter/shAutoloader",
-                               :cache => true %>
+      "syntax-highlighter/shAutoloader",
+      :cache => true %>
     <%= csrf_meta_tag %>
   </head>
   <body>
-    <h1><%= @title %></h1>
-    <%= render "pages/lookup" %>
-    <%= yield %>
+    <div id="nav">
+      <nav>
+        <h1><%= @title %></h1>
+        <ul>
+          <li><%= link_to t(:home), '/home' %></li>
+          <li><%= link_to t(:about), '/about' %></li>
+          <li><%= link_to t(:contact), '/contact' %></li>
+          <li class="lookup"><%= render "pages/lookup" %></li>
+        </ul>      
+      </nav>
+      <div id='top' class="break" ></div>
+    </div>
+    <div id="container">
+      <section>
+        <%= yield %>
+      </section>
+    </div>
   </body>
 </html>
