@@ -13,11 +13,9 @@
     <%= stylesheet_link_tag 'custom', :media => 'screen' %>
     <%= stylesheet_link_tag "shCore",
       "shThemeDefault" %>
-    <%= javascript_include_tag :defaults,
-      "syntax-highlighter/shCore",
+    <%= javascript_include_tag :defaults, "syntax-highlighter/shCore",
       "syntax-highlighter/shAutoloader",
-      'rails.validations',
-      :cache => true %>
+      'rails.validations' %>
     <%= csrf_meta_tag %>
   </head>
   <body>
