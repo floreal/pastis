@@ -5,7 +5,7 @@ class Lookup
   
   attr_accessor :snippet_id
   
-  validates :snippet_id, :numericality => true
+  validates :snippet_id, :numericality => true, :presence => true
   
   def initialize(attributes={})
     attributes && attributes.each do |name, value|
