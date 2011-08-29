@@ -1,7 +1,7 @@
 <%= form_for @lookup, :url => :lookup, :validate => true do |f| %>
   <%= f.label :snippet_id, 'Snippet #' %>
   <span>
-  <%= f.text_field :snippet_id, :class => 'text', :size => 5, :min => 1 %>
+  <%= f.text_field :snippet_id, :class => 'text', :size => 5 %>
   <%= f.submit t(:lookup) %>
   </span>
 <% end %>
